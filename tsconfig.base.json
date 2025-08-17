@@ -27,12 +27,17 @@
     /* Compilation Configuration */
     "composite": false, // Disable composite project support - not needed for Bun's fast transpilation
     "sourceMap": false, // Don't generate source maps
-    "declaration": true, // Don't generate .d.ts files
-    "declarationMap": true, // Don't generate sourcemaps for .d.ts files
+    "declaration": false, // Generate .d.ts files
+    "declarationMap": false, // Generate sourcemaps for .d.ts files
     "removeComments": true, // Remove comments from output
     "importHelpers": false, // Import emit helpers from 'tslib'
     "importsNotUsedAsValues": "remove", // Remove imports only used as types
     "isolatedModules": true, // Ensures compatibility with Bun's fast transpilation by ensuring each file can be safely transpiled
+    "noEmit": true, // Don't emit output files (Bun handles transpilation)
+
+    /* Module Resolution */
+    "allowImportingTsExtensions": true, // Allow importing .ts files as modules
+    "resolveJsonModule": true, // Allow importing JSON files as modules
 
     /* Module Interop */
     "esModuleInterop": true, // Enables emit interop between CommonJS and ES Modules
@@ -65,7 +70,6 @@
 
     /* Advanced */
     "skipLibCheck": true, // Skip type checking of declaration files
-    "resolveJsonModule": true, // Allow importing JSON files as modules
     "allowJs": false, // Allow JavaScript files to be compiled
     "pretty": true // Enable pretty output for errors
   },

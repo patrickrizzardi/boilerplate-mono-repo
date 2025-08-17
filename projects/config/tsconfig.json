@@ -10,11 +10,10 @@
 
     /* Module Resolution */
     "paths": {
-      "@app/*": ["src/*"],
-      "@assets/*": ["assets/*"]
+      "@config/*": ["projects/config/*"]
     }
   },
 
   /* Files to Include on compile */
-  "include": ["index.html", "src/**/*.{vue,ts,tsx}", "vite.config.ts", "tailwind.config.ts", "postcss.config.cjs"]
+  "include": ["base.config.ts"]
 }

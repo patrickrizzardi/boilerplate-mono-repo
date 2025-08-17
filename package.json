@@ -11,7 +11,8 @@
   "workspaces": [
     "projects/api",
     "projects/app",
-    "projects/database"
+    "projects/database",
+    "projects/config"
   ],
   "dependencies": {
     "@sequelize/core": "^7.0.0-alpha.46",
