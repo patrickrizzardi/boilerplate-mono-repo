@@ -4,7 +4,14 @@ export type EnvConfig = Record<string, { required: boolean }>;
 
 // Type helper that converts ENV keys to interface keys
 export type EnvConfigToInterface<T extends EnvConfig> = {
-    [K in keyof T as K extends string ? SnakeToCamel<K> : never]: string;
+    [K in keyof T as K extends string ?
+    T[K] extends { required: false } ?
+    SnakeToCamel<K>
+    : never
+    : never]: string | undefined;
+} & {
+    [K in keyof T as K extends string ? SnakeToCamel<K> : never]: T[K] extends { required: true } ? string
+    : string | undefined;
 };
 
 const getEnvVars = <T = unknown>(env: NodeJS.ProcessEnv, config: EnvConfig): T => {
