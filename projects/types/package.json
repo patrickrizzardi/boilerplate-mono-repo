@@ -1,0 +1,9 @@
+{
+  "name": "types",
+  "author": "Patrick Rizzardi <patrick@redact.digital> (https://redact.digital)",
+  "private": true,
+  "type": "module",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}

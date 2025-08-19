@@ -4,17 +4,16 @@
 
   "compilerOptions": {
     /* Build Configuration */
-    "outDir": "../../dist", // Output directory for compiled files
+    "outDir": "./dist", // Output directory for compiled files
     "rootDir": "../..", // Root directory of source files (workspace root)
     "baseUrl": "./", // Base directory to resolve non-relative module names
 
     /* Module Resolution */
     "paths": {
-      "@config/*": ["./*"],
-      "@custom-types/*": ["../types/*"]
+      "@types/*": ["./*"]
     }
   },
 
   /* Files to Include on compile */
-  "include": ["base.config.ts", "config.utils.ts", "../types/utility-types.ts"]
+  "include": ["utility-types.ts"]
 }

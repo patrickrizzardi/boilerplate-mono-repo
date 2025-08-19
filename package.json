@@ -12,7 +12,8 @@
     "projects/api",
     "projects/app",
     "projects/database",
-    "projects/config"
+    "projects/config",
+    "projects/types"
   ],
   "dependencies": {
     "@sequelize/core": "^7.0.0-alpha.46",
