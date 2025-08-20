@@ -4,7 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "migrate": "bun run umzug/migrate.ts"
+    "migrate": "bun run umzug/migrate.ts",
+    "lint": "eslint . --quiet --fix --exit-on-fatal-error --config eslint.config.mts --cache",
+    "lint:check": "eslint . --quiet --exit-on-fatal-error --config eslint.config.mts",
+    "lint:performance": "TIMING=25 eslint . --quiet --exit-on-fatal-error --config eslint.config.mts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {},
   "devDependencies": {

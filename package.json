@@ -2,9 +2,11 @@
   "name": "wealth-flow",
   "version": "0.1.0",
   "scripts": {
-    "start:api": "bun --watch projects/api/index.ts",
-    "start:app": "bun --bun --cwd projects/app vite --host",
-    "migrate": "bun run --cwd projects/database migrate"
+    "lint": "eslint . --quiet --fix --exit-on-fatal-error --config eslint.config.mts --cache",
+    "lint:check": "eslint . --quiet --exit-on-fatal-error --config eslint.config.mts",
+    "lint:performance": "TIMING=25 eslint . --quiet --exit-on-fatal-error --config eslint.config.mts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "author": "Patrick Rizzardi <patrick@redact.digital> (https://redact.digital)",
   "private": true,

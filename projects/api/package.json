@@ -3,6 +3,15 @@
   "author": "Patrick Rizzardi <patrick@redact.digital> (https://redact.digital)",
   "private": true,
   "type": "module",
+  "scripts": {
+    "start": "bun --watch index.ts",
+    "build": "bun build index.ts --minify --target=bun --outdir=dist --sourcemap",
+    "lint": "eslint . --quiet --fix --exit-on-fatal-error --config eslint.config.mts --cache",
+    "lint:check": "eslint . --quiet --exit-on-fatal-error --config eslint.config.mts",
+    "lint:performance": "TIMING=25 eslint . --quiet --exit-on-fatal-error --config eslint.config.mts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
   "dependencies": {
     "yinzerflow": "0.2.9"
   },

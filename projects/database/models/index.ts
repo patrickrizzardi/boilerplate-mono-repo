@@ -1,11 +1,12 @@
-import Sequelize, { importModels } from '@sequelize/core';
-import { MySqlDialect } from '@sequelize/mysql';
+import Sequelize, { importModels } from "@sequelize/core";
+import { MySqlDialect } from "@sequelize/mysql";
 
-if (!process.env.DATABASE_NAME) throw new Error('DATABASE_NAME not set');
-if (!process.env.DATABASE_PASSWORD) throw new Error('DATABASE_PASSWORD not set');
-if (!process.env.DATABASE_USER) throw new Error('DATABASE_USER not set');
-if (!process.env.DATABASE_HOST) throw new Error('DATABASE_HOST not set');
-if (!process.env.DATABASE_PORT) throw new Error('DATABASE_PORT not set');
+if (!process.env.DATABASE_NAME) throw new Error("DATABASE_NAME not set");
+if (!process.env.DATABASE_PASSWORD)
+  {throw new Error("DATABASE_PASSWORD not set");}
+if (!process.env.DATABASE_USER) throw new Error("DATABASE_USER not set");
+if (!process.env.DATABASE_HOST) throw new Error("DATABASE_HOST not set");
+if (!process.env.DATABASE_PORT) throw new Error("DATABASE_PORT not set");
 
 export const sequelize = new Sequelize({
   dialect: MySqlDialect,

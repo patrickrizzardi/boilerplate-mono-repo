@@ -1,25 +1,24 @@
-import { YinzerFlow, log } from 'yinzerflow';
+import { YinzerFlow, log } from "yinzerflow";
+import { util } from "./utils/util.js";
 
 export const app = new YinzerFlow({
   port: 5000,
-  logLevel: 'info',
+  logLevel: "info",
   networkLogs: true,
 });
 
 app.onError(({ response }, error) => {
-  log.error('Server error: \n', error);
+  log.error("Server error: \n", error);
   response.setStatusCode(500);
-  return { success: false, message: 'Internal server error' };
+  return { success: false, message: "Internal server error" };
 });
 
-app.get('/status', () => ({ success: true }));
-
+app.get("/status", () => ({ success: true }));
 
 (async (): Promise<void> => {
   await app.listen();
+  console.log(util());
 })().catch((error) => {
-  log.error('Server error: \n', error);
+  log.error("Server error: \n", error);
   process.exit(1);
 });
-
-

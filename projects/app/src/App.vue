@@ -21,11 +21,7 @@
         TailwindCSS
       </a>
       +
-      <a
-        href=""
-        target="_blank"
-        class="link text-purple-600"
-      >
+      <a href="" target="_blank" class="link text-purple-600">
         Find new css component library.
       </a>
     </h2>

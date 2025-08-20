@@ -16,5 +16,12 @@
   },
 
   /* Files to Include on compile */
-  "include": ["index.html", "src/**/*.{vue,ts,tsx}", "vite.config.ts", "tailwind.config.ts", "postcss.config.cjs"]
+  "include": [
+    "index.html",
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "vite.config.ts",
+    "tailwind.config.ts",
+    "postcss.config.cjs"
+  ]
 }

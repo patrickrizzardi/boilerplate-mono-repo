@@ -6,9 +6,9 @@ services:
     image: oven/bun:1.2.20
     restart: unless-stopped
     working_dir: /usr/src/app
-    command: sh -c "bun install && bun start:api"
+    command: sh -c "bun install && cd projects/api && bun start:api"
     ports:
-      - '5000:5000'
+      - "5000:5000"
     volumes:
       - ./:/usr/src/app
     networks:
@@ -18,9 +18,9 @@ services:
     image: oven/bun:1.2.20
     restart: unless-stopped
     working_dir: /usr/src/app
-    command: sh -c "bun install && bun start:app"
+    command: sh -c "bun install && cd projects/app && bun start:app"
     ports:
-      - '8080:5173'
+      - "8080:5173"
     volumes:
       - ./:/usr/src/app
     networks:
@@ -35,7 +35,7 @@ services:
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: password
     healthcheck:
-      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 5s
       timeout: 30s
       retries: 3

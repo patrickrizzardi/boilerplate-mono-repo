@@ -20,15 +20,21 @@
   // language - current active spelling language
   "language": "en",
   // words - list of words to be always considered correct
-  "words": ["ddsource", "ddtags", "lockb", "Promisable", "rizzardi", "valibot", "yinzerflow"],
+  "words": [
+    "ddsource",
+    "ddtags",
+    "lockb",
+    "Promisable",
+    "rizzardi",
+    "valibot",
+    "yinzerflow"
+  ],
   /**
    * flagWords - list of words to be always considered incorrect
    * This is useful for offensive words and common spelling errors.
    * For example "hte" should be "the"
    */
-  "flagWords": [
-    ""
-  ],
+  "flagWords": [""],
   /**
    * ignorePaths - list of glob patterns to ignore files
    * This is useful for ignoring files that are not source code.   *
